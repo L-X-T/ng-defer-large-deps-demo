@@ -1,11 +1,15 @@
 <div class="header">
-  <h1>Pivot Table</h1>
+  <h1>Deferred Pivot Table</h1>
 </div>
 
 <div class="container">
   <div class="row">
     <div class="col-12">
-      <app-pivot-table />
+      @defer (on immediate) {
+        <app-pivot-table />
+      } @placeholder {
+        <p>Pivot table is loading immediately.</p>
+      }
     </div>
   </div>
 </div>
